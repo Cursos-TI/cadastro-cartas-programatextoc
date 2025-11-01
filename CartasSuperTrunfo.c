@@ -1,5 +1,10 @@
 #include<stdio.h>
+//prototipo da funcao
+float divisao(float a,float b);
+
+//função principal
 int main(){
+   
    //====carta1====
    char estado[20];
    char codigo[20];
@@ -8,6 +13,8 @@ int main(){
    float area;
    float pib;
    int pontosturisticos;
+   float densidade_populacional;
+   float pib_per_capita;
 
    printf("\n====carta1====\n");
    printf("digite seu estado:");
@@ -31,6 +38,11 @@ int main(){
    printf("digite seus pontosturisticos:");
    scanf("%d",&pontosturisticos);
 
+   densidade_populacional=divisao(populacao,area);
+   pib_per_capita=divisao(pib,populacao);
+   
+   printf("densidade_populacional:%.2f\n",densidade_populacional);
+
    //====carta2====
    char estado2[20];
    char codigo2[20];
@@ -39,6 +51,8 @@ int main(){
    float area2;
    float pib2;
    int pontosturisticos2;
+   float densidade_populacional2;
+   float pib_per_capita2;
 
    printf("\n====carta2====\n");
 
@@ -63,6 +77,9 @@ int main(){
    printf("digite seus pontosturisticos2:");
    scanf(" %d",&pontosturisticos2);
 
+   densidade_populacional2=divisao(populacao2,area2);
+   pib_per_capita2=divisao(pib2,populacao2);
+
    //====saida formatada====
    printf("\n=============================================\n");
    printf("carta1:\n");
@@ -73,6 +90,8 @@ int main(){
    printf("sua area:%.2f km²\n",area);
    printf("seu pib:%.2f milhões de reais\n",pib);
    printf("seus pontosturisticos:%d\n",pontosturisticos);
+   printf("sua densidade_populacional:%.2f hab/km²\n",densidade_populacional);
+   printf("seu pib_per_capita:%.2f Reais\n",pib_per_capita);
 
    printf("carta2:\n");
    printf("nome do estado2:%s\n",estado2);
@@ -82,15 +101,21 @@ int main(){
    printf("sua area2:%.2f km²\n",area2);
    printf("seu pib2:%.2f milhões de reais\n",pib2);
    printf("seus pontosturisticos2:%d\n",pontosturisticos2);
-   printf("=================================================\n");
+   printf("sua densidade_populacional2:%.2f hab/km²\n",densidade_populacional2);
+   printf("seu pib_per_capita2:%.2f Reais\n",pib_per_capita2);
 
    return 0;
-
-
-
-
-
-
-
 }
+//imprementação da função de divisao
+float divisao(float a,float b){
+if(b==0){
+printf("erro:divisao por zero!\n");
+
+return 0;
+   }
+   return a/b;
+}
+
+
+
  
