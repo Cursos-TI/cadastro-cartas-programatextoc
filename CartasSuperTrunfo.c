@@ -145,9 +145,9 @@ int main(){
 
    printf("\n=============================================\n");
 
-   //Logica de comparação
-   printf("n\**comparação das cartas:**\n");
-
+   //Logica de comparação//
+   printf("\n**comparação das cartas:**\n");
+   
    char*vencedor;
    int populacaoA,areaB,pibC,pontosturisticosD,densidade_populacionalE,pib_per_capitaF,superpoderG;
 
@@ -193,8 +193,54 @@ int main(){
     ((superpoder2 > superpoder) ? "Carta 2 venceu":"empate");
     printf("superpoder: %s (%d)\n",vencedor,areaB);
 
-
    printf("\n=============================================\n");
+
+   //logica if
+   printf("\n**logica if**\n");
+
+   if(populacao>populacao2){
+   printf("populacao venceu parabens:\n");
+   }else{
+   printf("populacao2 venceu parabens:\n");
+   }
+
+   if(area>area2){
+   printf("area venceu parabens:\n");
+   }else{
+   printf("area2 venceu parabens:\n");
+   }
+
+   if(pib>pib2){
+   printf("pib venceu parabens:\n");
+   }else{
+   printf("pib2 venceu parabens:\n");
+   }
+
+   if(pontosturisticos>pontosturisticos2){
+   printf("pontosturisticos venceu parabens:\n");
+   }else{
+   printf("pontosturisticos2 venceu parabens:\n");
+   }
+   
+   if(densidade_populacional<densidade_populacional2){
+   printf("densidade_populacional venceu parabens:\n");
+   }else{
+   printf("densidade_populacional2 venceu parabens:\n");
+   }
+
+   if(pib_per_capita>pib_per_capita2){
+   printf("pib_per_capita venceu parabens:\n");
+   }else{
+   printf("pib_per_capita2 venceu parabens:\n");
+   }
+
+   if(superpoder>superpoder2){
+   printf("superpoder venceu parabens:\n");
+   }else{
+   printf("superpoder2 venceu parabens:\n");
+   }
+   
+   printf("\n======================================\n");
    
    return 0;
 }
