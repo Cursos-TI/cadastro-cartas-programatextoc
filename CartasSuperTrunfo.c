@@ -208,72 +208,59 @@ int Escolhadojogador,Escolhadocomputador;
    printf("5.densidade_populacional:\n");
    printf("6.pib_per_capita:\n");
    printf("7.superpoder:\n");
-   
+   scanf("%d",&Escolhadojogador);
+   Escolhadocomputador=Escolhadojogador;
 
    switch(Escolhadojogador){
-   case 1:printf("Jogador: populacao - ");
-   break;
-   
-   case 2:printf("Jogador: area - ");
-   break;
 
-   case 3:printf("Jogador: pib - ");
-   break;
-
-   case 4:printf("Jogador: pontosturistticos - ");
-   break;
-
-   case 5:printf("Jogador: densidade_populacional - ");
-   break;
-
-   case 6:printf("Jogador: pib_per_capita - ");
-   break;
-
-   case 7:printf("Jogador: superpoder - ");
-   break;
-
-   default:printf("opcao invalida\n");
-   break;}
-
-   if(populacao>populacao2){printf("populacao venceu parabens:\n");}
+   case 1:if(populacao>populacao2){printf("populacao venceu parabens:\n");}
    else if(populacao2>populacao)
    {printf("populacao2 venceu parabens:\n");}
    else{printf("houve empate");}
-
-   if(area>area2){ printf("area venceu parabens:\n");}
+   break;
+   
+   case 2:if(area>area2){ printf("area venceu parabens:\n");}
    else if(area2>area)
    {printf("area2 venceu parabens:\n");}
    else{printf("houve empate\n");}
+   break;
 
-   if(pib>pib2){printf("pib venceu parabens:\n");}
+   case 3:if(pib>pib2){printf("pib venceu parabens:\n");}
    else if(pib2>pib)
    {printf("pib2 venceu parabens:\n");}
    else{printf("houve empate\n");}
+   break;
 
-   if(pontosturisticos>pontosturisticos2)
+   case 4: if(pontosturisticos>pontosturisticos2)
    {printf("pontosturisticos venceu parabens:\n");}
    else if(pontosturisticos2>pontosturisticos)
    {printf("pontosturisticos2 venceu parabens:\n");}
    else{printf("houve empate\n");}
-   
-   if(densidade_populacional<densidade_populacional2)
+   break;
+
+   case 5:if(densidade_populacional<densidade_populacional2)
    {printf("densidade_populacional venceu parabens:\n");
    }else if(densidade_populacional2<densidade_populacional)
    {printf("densidade_populacional2 venceu parabens:\n");}
    else{printf("houve empate\n");}
+   break;
 
-   if(pib_per_capita>pib_per_capita2)
+   case 6: if(pib_per_capita>pib_per_capita2)
    {printf("pib_per_capita venceu parabens:\n");}
    else if(pib_per_capita2>pib_per_capita)
    {printf("pib_per_capita2 venceu parabens:\n");}
    else{printf("houve empate\n");}
-   
-   if(superpoder>superpoder2)
+   break;
+
+   case 7:if(superpoder>superpoder2)
    {printf("superpoder venceu parabens:\n");}
    else if(superpoder2>superpoder)
    {printf("superpoder2 venceu parabens:\n");}
    else{printf("houve empate\n");}
-   
+   break;
+
+   default:printf("opcao invalida\n");
+   break;}
    
    printf("\n======================================\n");
    
