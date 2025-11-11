@@ -1,4 +1,7 @@
 #include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
 //prototipo da funcao
 float divisao(float a,float b);
 float soma(float a,float b);
@@ -10,7 +13,8 @@ return a+b;
 }
 //função principal
 int main(){
-   
+int Escolhadojogador,Escolhadocomputador; 
+
    //====carta1====
    char estado[20];
    char codigo[20];
@@ -197,48 +201,79 @@ int main(){
 
    //logica if
    printf("\n**logica if**\n");
-
-   if(populacao>populacao2){
-   printf("populacao venceu parabens:\n");
-   }else{
-   printf("populacao2 venceu parabens:\n");
-   }
-
-   if(area>area2){
-   printf("area venceu parabens:\n");
-   }else{
-   printf("area2 venceu parabens:\n");
-   }
-
-   if(pib>pib2){
-   printf("pib venceu parabens:\n");
-   }else{
-   printf("pib2 venceu parabens:\n");
-   }
-
-   if(pontosturisticos>pontosturisticos2){
-   printf("pontosturisticos venceu parabens:\n");
-   }else{
-   printf("pontosturisticos2 venceu parabens:\n");
-   }
+   printf("1.populacao:\n");
+   printf("2. area:\n");
+   printf("3.pib:\n");
+   printf("4.pontosturisticos:\n");
+   printf("5.densidade_populacional:\n");
+   printf("6.pib_per_capita:\n");
+   printf("7.superpoder:\n");
    
-   if(densidade_populacional<densidade_populacional2){
-   printf("densidade_populacional venceu parabens:\n");
-   }else{
-   printf("densidade_populacional2 venceu parabens:\n");
-   }
 
-   if(pib_per_capita>pib_per_capita2){
-   printf("pib_per_capita venceu parabens:\n");
-   }else{
-   printf("pib_per_capita2 venceu parabens:\n");
-   }
+   switch(Escolhadojogador){
+   case 1:printf("Jogador: populacao - ");
+   break;
+   
+   case 2:printf("Jogador: area - ");
+   break;
 
-   if(superpoder>superpoder2){
-   printf("superpoder venceu parabens:\n");
-   }else{
-   printf("superpoder2 venceu parabens:\n");
-   }
+   case 3:printf("Jogador: pib - ");
+   break;
+
+   case 4:printf("Jogador: pontosturistticos - ");
+   break;
+
+   case 5:printf("Jogador: densidade_populacional - ");
+   break;
+
+   case 6:printf("Jogador: pib_per_capita - ");
+   break;
+
+   case 7:printf("Jogador: superpoder - ");
+   break;
+
+   default:printf("opcao invalida\n");
+   break;}
+
+   if(populacao>populacao2){printf("populacao venceu parabens:\n");}
+   else if(populacao2>populacao)
+   {printf("populacao2 venceu parabens:\n");}
+   else{printf("houve empate");}
+
+   if(area>area2){ printf("area venceu parabens:\n");}
+   else if(area2>area)
+   {printf("area2 venceu parabens:\n");}
+   else{printf("houve empate\n");}
+
+   if(pib>pib2){printf("pib venceu parabens:\n");}
+   else if(pib2>pib)
+   {printf("pib2 venceu parabens:\n");}
+   else{printf("houve empate\n");}
+
+   if(pontosturisticos>pontosturisticos2)
+   {printf("pontosturisticos venceu parabens:\n");}
+   else if(pontosturisticos2>pontosturisticos)
+   {printf("pontosturisticos2 venceu parabens:\n");}
+   else{printf("houve empate\n");}
+   
+   if(densidade_populacional<densidade_populacional2)
+   {printf("densidade_populacional venceu parabens:\n");
+   }else if(densidade_populacional2<densidade_populacional)
+   {printf("densidade_populacional2 venceu parabens:\n");}
+   else{printf("houve empate\n");}
+
+   if(pib_per_capita>pib_per_capita2)
+   {printf("pib_per_capita venceu parabens:\n");}
+   else if(pib_per_capita2>pib_per_capita)
+   {printf("pib_per_capita2 venceu parabens:\n");}
+   else{printf("houve empate\n");}
+   
+   if(superpoder>superpoder2)
+   {printf("superpoder venceu parabens:\n");}
+   else if(superpoder2>superpoder)
+   {printf("superpoder2 venceu parabens:\n");}
+   else{printf("houve empate\n");}
+   
    
    printf("\n======================================\n");
    
